@@ -1,0 +1,209 @@
+/* --- BIẾN MÀU SẮC HIỆN ĐẠI & RỰC RỠ --- */
+:root {
+    --bg-main: #040a3e;        /* Nền tối sâu thẳm sang trọng */
+    --card-bg: #1e293b;        /* Nền các khối */
+    --text-main: #b0b3c0;      /* Chữ sáng */
+    --text-muted: #94a3b8;     /* Chữ phụ */
+    --accent-pink: #cfceed;    /* Hồng neon */
+    --accent-purple: #1a1476;  /* Tím mộng mơ */
+    --accent-cyan: #ffffff;    /* Xanh neon */
+    --gradient-bg: linear-gradient(135deg, #0b0f4a, #0b0f4a, #0b0f4a);
+}
+
+/* --- DỌN DẸP CHUNG --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.7;
+    width: 100%;
+}
+
+/* --- 1. HEADER (Gradient rực rỡ) --- */
+header {
+    background: var(--gradient-bg);
+    color: #ffffff;
+    padding: 45px 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(225, 90, 12, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.tagline {
+    font-size: 1.05rem;
+    color: #f1f6f9;
+    margin-top: 8px;
+    font-weight: 300;
+}
+
+/* --- 2. ĐIỀU HƯỚNG (NAV) --- */
+nav {
+    background-color: #e3e7ef;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block; /* Chuẩn theo yêu cầu bắt buộc của đề */
+    margin: 0 15px;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ffffff;
+    background: var(--gradient-bg);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
+}
+
+/* --- 3. BỐ CỤC CHÍNH (CONTAINER, MAIN, ASIDE) --- */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    overflow: hidden; /* Clearfix cho float đúng chuẩn yêu cầu */
+}
+
+main {
+    width: 68%;
+    float: left;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+main h2 {
+    color: #f3f2f7;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0b2fb1;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Thẻ sự kiện & danh sách */
+.event-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid var(--accent-pink);
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
+    transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+    transform: translateX(5px);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.event-card h3 {
+    color: #dc0a0a;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.event-time, .event-location {
+    font-size: 0.9rem;
+    color: var(--accent-cyan);
+}
+
+/* Style cho hình ảnh */
+.image-box {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid var(--accent-purple);
+    padding: 5px;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.img-caption {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+.album-list {
+    list-style: none;
+}
+
+.album-list li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-cyan);
+}
+
+aside {
+    width: 28%;
+    float: right;
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+aside h3 {
+    font-size: 1.1rem;
+    color: var(--accent-cyan);
+    margin-bottom: 12px;
+    border-bottom: 2px solid #dbdee3;
+    padding-bottom: 8px;
+}
+
+aside p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* --- 4. FOOTER --- */
+footer {
+    clear: both; /* Bắt buộc để không bị đè layout */
+    background-color: #051130;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    border-top: 1px solid #fdfdfe;
+    font-size: 0.9rem;
+}
