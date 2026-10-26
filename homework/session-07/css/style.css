@@ -1,0 +1,469 @@
+
+/* ===== CÀI ĐẶT CHUNG ===== */
+:root {
+    --trang: #FFFFFF;
+    --den: #111111;
+    --xanh-bien: #1144a4;
+    --tim-than: #211B45;
+    --nen-phu: #F3F5FA;
+    --vien: #DCE1EC;
+    --font-chu: "Playwrite TZ Guides", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-chu);
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.7;
+    color: var(--den);
+    background-color: var(--nen-phu);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-chu);
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--xanh-bien);
+    transition: 0.3s ease;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 28px;
+    background-color: var(--trang);
+    border-radius: 12px;
+}
+
+section > h2 {
+    margin-bottom: 20px;
+    color: var(--tim-than);
+    font-size: 28px;
+}
+
+h2,
+h3 {
+    line-height: 1.35;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: var(--tim-than);
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: 35px 20px;
+    text-align: center;
+    color: var(--trang);
+    background-color: var(--tim-than);
+    border-bottom: 4px solid var(--xanh-bien);
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+header p {
+    color: var(--trang);
+    opacity: 0.85;
+}
+
+/* ===== MENU ĐIỀU HƯỚNG ===== */
+nav {
+    background-color: var(--den);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 15px 25px;
+    color: var(--trang);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+nav a:hover {
+    background-color: var(--tim-than);
+    color: var(--trang);
+}
+
+nav a.active {
+    color: var(--trang);
+    background-color: var(--xanh-bien);
+    border-bottom: 3px solid var(--trang);
+}
+
+/* ===== KHỐI NỘI DUNG CHÍNH ===== */
+main {
+    width: 90%;
+    max-width: 1150px;
+    margin: 35px auto;
+}
+
+/* ===== PHẦN CHÀO MỪNG ===== */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 360px;
+    padding: 45px;
+    color: var(--trang);
+    background:
+        linear-gradient(
+            90deg,
+            rgba(33, 27, 69, 0.96),
+            rgba(33, 27, 69, 0.60)
+        ),
+        url("https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=1600&q=85")
+        center / cover no-repeat;
+    border-left: 5px solid var(--xanh-bien);
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.hero h2 {
+    margin-bottom: 18px;
+    color: var(--trang);
+    font-size: 38px;
+}
+
+.hero p {
+    margin-bottom: 22px;
+}
+
+/* ===== NÚT BẤM ===== */
+.btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 23px;
+    color: var(--trang);
+    background-color: var(--xanh-bien);
+    border: 2px solid var(--xanh-bien);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.btn:hover {
+    color: var(--trang);
+    background-color: var(--tim-than);
+    border-color: var(--tim-than);
+}
+
+/* ===== DANH SÁCH THẺ NỘI DUNG ===== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.card {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: var(--trang);
+    border: 1px solid var(--vien);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(33, 27, 69, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    margin-bottom: 5px;
+}
+
+/* ===== LỢI ÍCH VÀ GIÁ TRỊ ===== */
+.benefits {
+    background-color: var(--tim-than);
+}
+
+.benefits > h2 {
+    color: var(--trang);
+}
+
+.benefit {
+    margin: 0;
+    padding: 22px;
+    color: var(--den);
+    background-color: var(--trang);
+    border: none;
+    border-top: 4px solid var(--xanh-bien);
+    border-radius: 8px;
+}
+
+.benefit h3 {
+    color: var(--tim-than);
+}
+
+/* ===== TIN TỨC VÀ SỰ KIỆN ===== */
+.news-item {
+    margin-bottom: 16px;
+    padding: 18px;
+    background-color: var(--nen-phu);
+    border-left: 4px solid var(--xanh-bien);
+    border-radius: 5px;
+}
+
+.news-item:last-child {
+    margin-bottom: 0;
+}
+
+.news-item p {
+    margin-bottom: 8px;
+}
+
+.news-item a {
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    color: var(--tim-than);
+    text-decoration: underline;
+}
+
+/* ===== TIÊU ĐỀ TRANG ===== */
+.page-banner {
+    text-align: center;
+    color: var(--trang);
+    background-color: var(--tim-than);
+    border-bottom: 4px solid var(--xanh-bien);
+}
+
+.page-banner h2 {
+    margin-bottom: 12px;
+    color: var(--trang);
+    font-size: 32px;
+}
+
+.page-banner p {
+    margin-bottom: 0;
+}
+
+/* ===== TRANG GIỚI THIỆU ===== */
+.about-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-content h2 {
+    margin-bottom: 15px;
+    color: var(--tim-than);
+}
+
+.about-content p {
+    margin-bottom: 14px;
+}
+
+.about-section img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ===== TRANG LIÊN HỆ ===== */
+.contact-intro p {
+    max-width: 850px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+}
+
+.contact-details h2 {
+    margin-bottom: 15px;
+    color: var(--tim-than);
+    font-size: 24px;
+}
+
+.contact-details h2:not(:first-child) {
+    margin-top: 28px;
+}
+
+.contact-list {
+    padding-left: 22px;
+}
+
+.contact-list li {
+    margin-bottom: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contact-list a {
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    color: var(--tim-than);
+    text-decoration: underline;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 260px;
+    margin-bottom: 18px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.note {
+    margin-top: 20px;
+    padding: 12px;
+    color: var(--den);
+    background-color: var(--nen-phu);
+    border-left: 3px solid var(--tim-than);
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+/* ===== PHẦN THAM GIA CÂU LẠC BỘ ===== */
+.join-section {
+    text-align: center;
+    background-color: var(--nen-phu);
+    border: 1px solid var(--vien);
+}
+
+.join-section p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ===== CHÂN TRANG ===== */
+footer {
+    padding: 25px 15px;
+    color: var(--trang);
+    background-color: var(--den);
+    text-align: center;
+    border-top: 4px solid var(--xanh-bien);
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:last-child {
+    color: var(--trang);
+    opacity: 0.75;
+    font-size: 14px;
+}
+
+/* ===== GIAO DIỆN ĐIỆN THOẠI VÀ MÁY TÍNH BẢNG ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    main {
+        width: 94%;
+        margin: 22px auto;
+    }
+
+    section {
+        padding: 20px;
+        margin-bottom: 22px;
+    }
+
+    .hero {
+        min-height: 320px;
+        padding: 25px;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section img {
+        height: 240px;
+    }
+
+    nav a {
+        padding: 12px 15px;
+    }
+}
+
+/* ===== GIAO DIỆN ĐIỆN THOẠI NHỎ ===== */
+@media (max-width: 420px) {
+    header h1 {
+        font-size: 26px;
+        letter-spacing: 2px;
+    }
+
+    nav a {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    section > h2 {
+        font-size: 24px;
+    }
+
+    .contact-details h2 {
+        font-size: 21px;
+    }
+}
+
